@@ -20,14 +20,21 @@
 // =================================================
 
 // 1.) Declare a variable
+let x = 10
 
 // 2.) Change the value of this variable
+x = 23
 
 // 3.) Change the data type of this variable
+x = 'a variable'
 
 // 4.) Create another variable and the one from above to concatenate
+y = 'this is '
+z = y + x
+console.log(z)
 
 // 5.) Use any of the variables above or create new ones and print using string interpolation
+console.log("What is x?" + " " + z)
 
 // ================ Variable Names =================
 /* 
@@ -44,16 +51,28 @@
 // Look up the following string methods!
 
 // Using charAt(), print the letter i in Sabrina
+let name1 = "Sabrina"
+console.log(name1.charAt(4))
 
 // Define Unicode in a comment, and get the Unicode using charCodeAt() of the third character in Teddy
+// Unicode characters are a series of units that represent the most common characters
+let name2 = "Teddy"
+console.log(name2.charCodeAt(3))
 
 // Using fromCharCode() - make it readable for us :). You'll see!
+// console.log(name2.fromCharCode(3))
 
 // Take your first and last name and concat()
+const firstName = "Alejandria"
+const lastName = "Davila"
+console.log(firstName.concat(" ", lastName))
 
 // Create a string and make it return true using startsWith()
+const startString = "Bongo Cat is really cute"
+console.log(startString.startsWith("Bon"))
 
 // Now use any variable with endsWith() and return false
+console.log(lastName.endsWith("cute"))
 
 // Finish the following sentence. Use includes() and return true.
 const ozgur = 'Once upon a time Ozgur looked up at the Moon, '

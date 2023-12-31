@@ -75,28 +75,36 @@ console.log(startString.startsWith("Bon"))
 console.log(lastName.endsWith("cute"))
 
 // Finish the following sentence. Use includes() and return true.
-const ozgur = 'Once upon a time Ozgur looked up at the Moon, '
+const ozgur = 'Once upon a time Ozgur looked up at the Moon, and something looked back'
+console.log(ozgur.includes('Moon'))
 
 // Help! I'm looking for my cow! Using indexOf() help Josh find his cow. What's the index of cow?
 const joshHadALittleLambOopsCow = "Josh lives in a farm. Josh was overwhelmed with coding. Josh is stressed out. Josh fed the chickens this morning. He watered his plants. He took his cow Betsy on a walk. Josh went home without Betsy. Josh went to bed that night, and realized he went home alone."
+console.log(joshHadALittleLambOopsCow.indexOf('cow'))
 
 // Oh no! The alien doppelgangers are here. Let's use our laserbeam lastIndexOf() to shoot down the last alien named Vanessa in the String Universe.
-
 const vanessa = "I am the Alpha Vanessa. I am the Omega Vanessa. We do not come in peace."
+console.log(vanessa.lastIndexOf('Vanessa'))
 
 // Can we use length for strings? I don't know, you tell me.
 const noWeCantTeo = "but did you try it out though?"
+console.log(noWeCantTeo.length)
 
 // If only it was this easy to replace() my ex. Totally not joking, LOL. JK
 const replaceGokuWithVegeta = "For my DBZ fans, we all know Goku is the best!"
+console.log(replaceGokuWithVegeta.replace("Goku", "Vegeta"))
 
 // Josh has been forgetful lately. Let's help Josh by using search(), and find their right 'wifey'. 
 const joshIsLookingForWifey = "WIFEY 1, wifey 2, WiFeY 3, Wifey 4"
+let regex = /wifey/g
+console.log(joshIsLookingForWifey.search(regex))
 
 // I guess we can share this pizza sentence. Use slice() to return the other half of pizza.
 const pizzaSentence = "pizza, other half of pizza"
+console.log(pizzaSentence.slice(7))
 
 // Now using the pizza sentence, return only pizza (before the comma)
+console.log(pizzaSentence.slice(0,5))
 
 // Okay, but who decided to go to this expensive restaurant? Yaz, Poornima, and Leshawn decided to split() the bill. Return an array separating Yaz, Poornima, and Leshawn.
 const splitTheBill = "Yaz, Poornima, and Leshawn"

@@ -108,31 +108,44 @@ console.log(pizzaSentence.slice(0,5))
 
 // Okay, but who decided to go to this expensive restaurant? Yaz, Poornima, and Leshawn decided to split() the bill. Return an array separating Yaz, Poornima, and Leshawn.
 const splitTheBill = "Yaz, Poornima, and Leshawn"
-
+let billArray = splitTheBill.split(",")
+console.log(billArray)
 // OH NO! The alien invaders from earlier were so against bill splitting so they decided to split() Yaz, Poornima, and Leshawn into pieces. Using splitTheBill, return an array separating all three by characters.
+let newBillArray = splitTheBill.split("")
+console.log(newBillArray)
 
 // Use this toLowerCase()
 const angry = "LOWER YOUR VOICE DOWN IF YOU AIN'T PAYING MY BILLS."
+console.log(angry.toLowerCase())
+
 // Tuan was angry today. Create a string with words that Tuan would yell out. Now lowercase it, to tell Tuan to chill out. 
+const tuan = "I FOUND IT"
+console.log(tuan.toLowerCase())
 
 // toUpperCase()
 const jahlunSaidToPutSomeRespectToHisName = "jahlun"
+console.log(jahlunSaidToPutSomeRespectToHisName.toUpperCase())
 
 // substring()
 // on the chopping block...
 
 // Returns "ell"
 const basicGreeting = "Hello World"
+console.log(basicGreeting.substring(1,4))
 
 // Returns "JavaScript"
 const ohReally = "JavaScript Substring"
+console.log(ohReally.substring(0,10))
 
 // Returns aol.com
 const aslDays = "xXteoWuzHereXx@aol.com"
+console.log(aslDays.substring(15))
 
 // trim()
 // If only I can use this for my love handles...
 // Create a variable with a string value with some extra loving on both sides.
+let extraSpace = "            Hiya!                    "
+console.log(extraSpace.trim())
 
 // =================================================
 //                     BOOLEAN
@@ -147,24 +160,41 @@ const b = 10;
 const c = 15;
 const d = "Keke"
 
-// console.log(a _ b)
-// console.log(c _ b)
-// console.log(d _ d)
-// console.log(d _ a)
-// console.log(a _ 15)
-// console.log(a _ b _ c)
-// console.log(c _ b _ a _ d)
+console.log(a < b)
+console.log(c > b)
+console.log(d == d)
+console.log(d != a)
+console.log(a < 15)
+console.log(a < b < c)
+console.log(c > b > a != d)
 
 // =================================================
 //                     LOOPS
 // =================================================
 
 // Ken has a headache today and he said the room has been spinning like crazy. Make Ken's room spin 10 times using FOR LOOP. Make him print a sentence.
+let roomSpin = 0
+for(let i = 0; i < 10; i++){
+  roomSpin = roomSpin + 1
+  if(roomSpin == 10){
+    console.log(`The room has spun ${roomSpin} times`)
+  }
+}
 
 // Harry said that was so mean of Teo to do Ken dirty like that. Make Teo's vision spin 20 times FOR LOOP.
-
+let teoSpin = 0
+for(let i = 0; i < 20; i ++){
+  teoSpin = teoSpin + 1
+  if(teoSpin == 20){
+    console.log(`Teo's vision has spun ${teoSpin} times`)
+  }
+}
 // But wait! Lisa said, while Teo is spinning 20 times. Let's make him say "I'm sorry". Print I'm sorry 20 times using a WHILE loop.
-
+teoSpin = 0
+while(teoSpin <=20){
+  console.log(`I'm sorry`)
+  teoSpin = teoSpin + 1
+}
 // For the next three, look for the syntax of FOR IN and FOR OF loop. Very easy to understand syntax, and very clean :) 
 
 // To The Left! To The Left! Everything I want in the console to the left. Print thing1, thing2, thing 3 using (FOR IN LOOP)
@@ -173,16 +203,29 @@ const whateverQueenBeySaid = {
   thing2: 'clothes',
   thing3: 'gaming console'
 }
+for(const property in whateverQueenBeySaid){
+  console.log(`${property}`)
+}
 
 // Using (FOR IN LOOP), print the indexes of the array.
 const lana = ['l', 'a', 'n', 'a']
+for(const index in lana){
+  console.log(index)
+}
 
 // USE (FOR OF LOOP)!
 const tia = ['teo', 'the', 'syntax', 'of', 'this', 'is', 'cleaner']
+for(const element of tia){
+  console.log(element)
+}
 
 // Look into forEach() loop, it accepts a callback aka a function inside a function. 
 // Swathi said don't forget each person. No person left behind! Use forEach() to iterate over the array perscholas. Inside the function, create a variable with the string "PS". Print their name in the console concatenated with the variable. 
 const perscholas = ['Amira', 'Arely', 'Jonathan']
+perscholas.forEach((element) => {
+  let string = "PS"
+  console.log(element.concat(" ", string))
+})
 
 // =================================================
 //                     ARRAYS

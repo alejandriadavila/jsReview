@@ -60,7 +60,7 @@ let name2 = "Teddy"
 console.log(name2.charCodeAt(3))
 
 // Using fromCharCode() - make it readable for us :). You'll see!
-// console.log(name2.fromCharCode(3))
+// console.log(name2.fromCharCode(100))
 
 // Take your first and last name and concat()
 const firstName = "Alejandria"
@@ -232,64 +232,105 @@ perscholas.forEach((element) => {
 // =================================================
 
 // Look up the following: Make a note of what each one of these methods do
-// push()
-// pop()
-// unshift()
-// shift()
-// concat()
-// splice()
-// slice()
-// sort()
-// includes()
-// indexOf()
-// length
+// push() adds elements to the end of an array, returns the new length of the array
+// pop() removes the last element from the array, returns the new length of the array
+// unshift() adds elements to the beginning of an array, returns the new length of the array
+// shift() removes the first element from the beginning of an array, returns the new length of the array
+// concat() merges two or more arrays, returns a new array (doesn't change the original arrays)
+// splice() changes contents of the array by removing or replacing existing elements or adding new elements
+// slice() returns a shallow copy of a portion of an array (doesn't change the original array)
+// sort() sorts elements of an array and returns the same array now sorted (does this based on unicode values)
+// includes() determines if an array includes a value among its entries, returns T or F
+// indexOf() returns the first index at which an element can be found in an array, returns -1 if not found
+// length the length property returns the number of elements in the array
 
 const fruits = ['apple', 'banana', 'orange']
 
 // Print banana
+console.log(fruits[1])
 
 // Let's turn it up a notch. I won't tell you what array methods to use. 
 
 // Join all the elements of the array into a string separated by a space.
+console.log(fruits.toString())
 
 // Remove orange
+fruits.pop()
+console.log(fruits)
 
 // Add strawberry, kiwi, and grapes at the end
+fruits.push('strawberry', 'kiwi', 'grapes')
+console.log(fruits)
 
 // Remove apple
+fruits.shift()
+console.log(fruits)
 
 // Add mango at the beginning of the array
+fruits.unshift('mango')
+console.log(fruits)
 
 // Add lemon, and grapefruit between mango and banana
+fruits.splice(1, 0, 'lemon', 'grapefruit')
+console.log(fruits)
 
 // Remove banana and strawberry
+fruits.splice(3, 2)
+console.log(fruits)
 
 // Create a new array called exoticFruits. Add 3 exotic fruits inside of this array. Create a new variable and assign it with the value of concatinating fruits array and exoticFruits array.
+const exoticFruits = ['lychee', 'kumquat', 'pomelo']
+const allFruits = fruits.concat(exoticFruits)
+console.log(allFruits)
 
 // Print the last two exotic fruits without altering the newly concatenated array.
+console.log(exoticFruits.slice(-2))
 
 // Monalissa said she needs help re-organizing her items in alphabetical order.
 const monalissaIsMessy = ["pencil", "paper", "notebook", "computer"]
+console.log(monalissaIsMessy.sort())
 
 // Kevin accidentally stepped into the mirror world and needs help reversing his words.
 const mirrorMirrorOnTheWall = ["all", "them", "of", "greatest", "the", "is", "who"]
+console.log(mirrorMirrorOnTheWall.reverse())
 
 // ===== HIGHER ORDER METHODS =====
 // Rafael said he''s trying to stop cursing so much, and he wants to start with his text messages. Help him write code to eliminate the badword in his sentences. Must return a string sentence. Must use filter(). :) 
 const RafaelNoBadWords = "I am so tired of this badword food. I do not want this badword badword food."
+// function filterItems(arr, query) {
+//   return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
+// }
+// console.log(filterItems(RafaelNoBadWords, "badword"))
 
 // Man math is hard. Let's make our computer do it for us. Use reduce() to find the total of the numbers in numbersToAddUp
 const numbersToAddUp = [99, 5677, 232, 84, 2, 231]
+const initialValue = 0
+const sumWithInitial = numbersToAddUp.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+)
+
+console.log(sumWithInitial)
 
 // ===== SPREAD OPERATOR ===== 
 
 // Create a variable and assign a value of a copied array using the spread operator
+spreadVariable = [...fruits]
+console.log(spreadVariable)
 
 // Create two arrays with any elements and connect both of them using the spread operator. Save the connected arrays into a new variable.
+arr1 = [12, 123, 1234, 12345]
+arr2 = [23, 234, 2345, 23456]
+arr3 = [...arr1, ...arr2]
+console.log(arr3)
 
 // Using the variable with the newly connected arrays, use spread operator to add something at the end.
+arr3 = [...arr3, 45678]
+console.log(arr3)
 
 // Using the variable with the newly connected arrays, use spread operator to add something at the beginning.
+arr3 = [1, ...arr3]
+console.log(arr3)
 
 // ===== ACCESS =====
 
@@ -316,7 +357,10 @@ const donutShop =[
 ]
 
 // Anthony wants applecrumble. Print please!
+console.log(`Anthony wants ${donutShop[1][0][1]}`)
+
 // Tosi wants ihatethis. :) Print!
+console.log(`Tosi wants ${donutShop[2][0][0][1]}`)
 
 // =================================================
 //                     IF/ELSE
